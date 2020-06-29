@@ -42,6 +42,6 @@ run_analysis <- function(directory="UCI HAR Dataset"){
     # use aggregate from plyr library to apply mean function to all columns 
     #according to subject id and activity
   tidy <- aggregate(.~Subject_ID + Activity, tidy, mean)
-  #write.table(tidy, file ="tidy.txt",row.names= FALSE)
+  write.table(tidy, file ="tidy.txt",row.names= FALSE)
   
 }
